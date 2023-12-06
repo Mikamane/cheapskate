@@ -1,0 +1,7 @@
+{
+  "name": "cheapskate",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
