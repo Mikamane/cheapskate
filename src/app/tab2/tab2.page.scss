@@ -1,0 +1,37 @@
+ion-header,
+ion-toolbar,
+ion-title {
+  --background: #cc1f2d;
+}
+ion-content {
+  --background: #f3f3f3;
+  width: 100vw;
+}
+
+// div que engloba todos os itens abaixo do carrossel
+.main {
+  width: 96%;
+  margin: auto;
+  margin-top: 4vh;
+}
+
+//Botão de filtro
+ion-button {
+  margin-bottom: 4vh;
+  --background: #731630;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  width: fit-content;
+}
+//Icon do filtro
+ion-icon {
+  margin-left: 5%;
+  font-size: 2rem;
+}
+
+//Conteudo do filtro
+ion-item {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+

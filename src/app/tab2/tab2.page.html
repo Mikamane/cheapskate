@@ -1,17 +1,48 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title> </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="main">
+    <ion-button id="popover-button">
+      Filtrar por <ion-icon name="filter"></ion-icon
+    ></ion-button>
+    <ion-popover trigger="popover-button" [dismissOnSelect]="true" side="right">
+      <ng-template>
+        <ion-content>
+          <ion-list>
+            <ion-item [button]="true" [detail]="false"
+              >Preço mais alto</ion-item
+            >
+            <ion-item [button]="true" [detail]="false"
+              >Preço mais baixo</ion-item
+            >
+            <ion-item [button]="true" [detail]="false"
+              >Melhor avaliação</ion-item
+            >
+            <ion-item [button]="true" [detail]="false">Pior avaliação</ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-card>
+      <img
+        alt="Silhouette of mountains"
+        src="https://ionicframework.com/docs/img/demos/card-media.png"
+      />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more,
+        nothing less.
+      </ion-card-content>
+      
+    </ion-card>
+  </div>
 </ion-content>
