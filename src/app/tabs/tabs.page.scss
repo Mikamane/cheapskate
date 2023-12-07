@@ -1,1 +1,22 @@
+ion-header {
+  background-color: #CC1F2D;
+  display: flex;
+  padding: 0px 0px 2vw 2vw;
+}
 
+.logo {
+  height: 8vh;
+}
+
+ion-tabs,
+ion-tab-bar,
+ion-tab-button {
+  --background: #cccccc;
+}
+
+ion-tab-button {
+  font-size: 0.82rem;
+  --color: #2e2e2e;
+  --color-selected: #CC1F2D;
+  --ripple-color: #CC1F2D;
+}
