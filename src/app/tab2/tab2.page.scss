@@ -3,9 +3,11 @@ ion-toolbar,
 ion-title {
   --background: #cc1f2d;
 }
-ion-content {
+.produtosContainer {
   --background: #f3f3f3;
   width: 100vw;
+  top: 9vh;
+  --padding-bottom: 10vh;
 }
 
 // div que engloba todos os itens abaixo do carrossel
@@ -16,7 +18,7 @@ ion-content {
 }
 
 //Botão de filtro
-ion-button {
+#popover-button {
   margin-bottom: 4vh;
   --background: #731630;
   font-family: "Raleway", sans-serif;
@@ -26,7 +28,7 @@ ion-button {
 //Icon do filtro
 ion-icon {
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 //Conteudo do filtro
@@ -35,3 +37,91 @@ ion-item {
   font-weight: 600;
 }
 
+//----------Edição do card abaixo------------
+
+ion-row,
+ion-col,
+ion-grid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 2%;
+}
+
+//Caixa externa do card
+ion-card {
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin: 0 0 5vh 0;
+  padding: 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+//Imagem dentro do card
+.imgCard {
+  width: 100%;
+  height: 38%;
+  object-fit: cover;
+}
+
+//caixa do nome do produto, preço e quantidade
+ion-card-header {
+  width: 100%;
+  height: 62%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  justify-content: space-between;
+}
+//Nome do produto no card
+ion-card-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4em;
+  font-weight: 400;
+  color: #000;
+  margin: 3% 2% 0 2%;
+}
+
+//Preço no card
+p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #ff5233;
+  margin: 0 2% 0 2%;
+}
+
+//"em estoque"
+legend {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #000;
+  margin: 0 2% 0 2%;
+}
+
+//botão de "ver mais" do card
+ion-button {
+  margin: 0;
+  padding: 0;
+  --background: #ff5233;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h6 {
+  margin: 0;
+  padding: 1%;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: underline;
+}
+//icon do button do card
+i {
+  text-decoration: none;
+  font-size: 1.5em;
+}

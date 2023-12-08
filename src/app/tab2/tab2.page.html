@@ -1,14 +1,9 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title> </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
+<ion-content class="produtosContainer">
   <div class="main">
     <ion-button id="popover-button">
       Filtrar por <ion-icon name="filter"></ion-icon
     ></ion-button>
+
     <ion-popover trigger="popover-button" [dismissOnSelect]="true" side="right">
       <ng-template>
         <ion-content>
@@ -28,21 +23,53 @@
       </ng-template>
     </ion-popover>
 
-    <ion-card>
-      <img
-        alt="Silhouette of mountains"
-        src="https://ionicframework.com/docs/img/demos/card-media.png"
-      />
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      </ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/card-media.png"
+              class="imgCard"
+            />
+            <ion-card-header>
+              <ion-card-title>Card Title - Nome do produto</ion-card-title>
+              <p>R$500,00</p>
 
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more,
-        nothing less.
-      </ion-card-content>
-      
-    </ion-card>
+              <legend>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                quasi pariatur obcaecati rerum, fugiat, aliquid impedit
+                similique beatae magni.
+              </legend>
+              <ion-button expand="full"
+                ><h6>Adicionar ao carrinho</h6>
+                <i class="fa-solid fa-cart-plus"></i
+              ></ion-button>
+            </ion-card-header> </ion-card
+        ></ion-col>
+        <ion-col
+          ><ion-card>
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/card-media.png"
+              class="imgCard"
+            />
+            <ion-card-header>
+              <ion-card-title>Card Title - Nome do produto</ion-card-title>
+              <p>R$500,00</p>
+
+              <legend>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                quasi pariatur obcaecati rerum, fugiat, aliquid impedit
+                similique beatae magni.
+              </legend>
+              <ion-button expand="full"
+                ><h6>Adicionar ao carrinho</h6>
+                <i class="fa-solid fa-cart-plus"></i
+              ></ion-button>
+            </ion-card-header> </ion-card
+        ></ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>

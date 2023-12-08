@@ -1,0 +1,11 @@
+ion-header,
+ion-toolbar,
+ion-title {
+  --background: #cc1f2d;
+}
+ion-content {
+  --background: #f3f3f3;
+  width: 100vw;
+  top: 9vh;
+  --padding-bottom: 10vh;
+}

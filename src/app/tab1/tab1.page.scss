@@ -6,9 +6,26 @@ ion-title {
 ion-content {
   --background: #f3f3f3;
   width: 100vw;
+  top: 9vh;
+  --padding-bottom: 10vh;
+}
+
+img {
+  width: 100vw;
+  max-height: 50vh;
+  object-fit: cover;
 }
 
 // div que engloba todos os itens abaixo do carrossel
+ion-row,
+ion-col,
+ion-grid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 2%;
+}
+
 .main {
   width: 96%;
   margin: auto;
@@ -16,62 +33,73 @@ ion-content {
 // título "Mais vendidos"
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.75em;
   font-weight: 600;
+  margin-bottom: 2vh;
 }
 
 //Caixa externa do card
 ion-card {
-  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
   display: flex;
   height: fit-content;
-  margin: 0;
+  margin: 0 0 5vh 0;
   padding: 0;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-} 
+}
 //Imagem dentro do card
 .imgCard {
-  width: 45%;
+  width: 40%;
   object-fit: cover;
 }
 
 //caixa do nome do produto, preço e quantidade
 ion-card-header {
-  width: 55%;
+  width: 100%;
+  height: 62%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  justify-content: space-between;
 }
 //Nome do produto no card
 ion-card-title {
+  width: 100%;
   font-family: "Raleway", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.3em;
+  font-weight: 400;
   color: #000;
-  margin: 2%;
+  margin: 3% 1% 0 1%;
 }
 
 //Preço no card
 p {
   font-family: "Raleway", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #FF5233;
-  margin: 3% 2% 3% 2% ;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #ff5233;
+  margin: 0 2% 0 2%;
 }
 
 //"em estoque"
-legend{
+legend {
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: dotted underline #000 2px;
-  text-underline-offset: 5px;
+  font-size: 1em;
+  font-weight: 500;
   color: #000;
-  margin: 0% 2% 5% 2% ;
+  margin: 0 2% 2% 2%;
+  text-decoration: dotted underline #000 2px;
+  text-underline-offset: 4px;
 }
 
 //botão de "ver mais" do card
-ion-button{
+ion-button {
   margin: 0;
-  --background: #FF5233;
+  padding: 0;
+  --background: #ff5233;
+  font-size: 1em;
+  font-weight: 500;
 }
