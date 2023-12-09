@@ -1,12 +1,11 @@
-ion-header,
-ion-toolbar,
-ion-title {
-  --background: #cc1f2d;
-}
+/* Google Fonts:
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif; */
+
 .produtosContainer {
-  --background: #f3f3f3;
+  --background: var(--customBackground);
   width: 100vw;
-  top: 9vh;
+  top: 4vh;
   --padding-bottom: 10vh;
 }
 
@@ -14,16 +13,17 @@ ion-title {
 .main {
   width: 96%;
   margin: auto;
-  margin-top: 4vh;
+  margin-top: 6vh;
 }
 
 //Botão de filtro
 #popover-button {
   margin-bottom: 4vh;
-  --background: #731630;
+  --background: var(--customColor5);
   font-family: "Raleway", sans-serif;
   display: flex;
   width: fit-content;
+  color: var(--customColor1);
 }
 //Icon do filtro
 ion-icon {
@@ -46,10 +46,12 @@ ion-grid {
   margin: 0;
   padding: 0;
   gap: 2%;
+  border-radius: 50px;
 }
 
 //Caixa externa do card
 ion-card {
+  border-radius: 0;
   min-width: 300px;
   max-width: 500px;
   display: flex;
@@ -57,7 +59,8 @@ ion-card {
   height: fit-content;
   margin: 0 0 5vh 0;
   padding: 0;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+  background-color: #fff;
 }
 //Imagem dentro do card
 .imgCard {
@@ -79,28 +82,28 @@ ion-card-header {
 }
 //Nome do produto no card
 ion-card-title {
-  font-family: "Raleway", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.4em;
-  font-weight: 400;
-  color: #000;
+  font-weight: 800;
+  color: var(--customColor2);
   margin: 3% 2% 0 2%;
 }
 
 //Preço no card
 p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.5em;
-  font-weight: 500;
-  color: #ff5233;
+  font-weight: 900;
+  color: var(--customColor3);
   margin: 0 2% 0 2%;
 }
 
-//"em estoque"
+//"Mini-Descrição"
 legend {
-  font-family: "Raleway", sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  color: #000;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--customColor2);
   margin: 0 2% 0 2%;
 }
 
@@ -108,9 +111,10 @@ legend {
 ion-button {
   margin: 0;
   padding: 0;
-  --background: #ff5233;
+  --background: var(--customColor1);
   display: flex;
   justify-content: space-evenly;
+  font-family: "Raleway", serif;
 }
 
 h6 {

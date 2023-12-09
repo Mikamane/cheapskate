@@ -1,12 +1,11 @@
-ion-header,
-ion-toolbar,
-ion-title {
-  --background: #cc1f2d;
-}
+/* Google Fonts:
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif; */
+
 ion-content {
-  --background: #f3f3f3;
+  --background: var(--customBackground);
   width: 100vw;
-  top: 9vh;
+  top: 4vh;
   --padding-bottom: 10vh;
 }
 
@@ -36,6 +35,7 @@ h2 {
   font-size: 1.75em;
   font-weight: 600;
   margin-bottom: 2vh;
+  color: var(--customColor5);
 }
 
 //Caixa externa do card
@@ -46,7 +46,8 @@ ion-card {
   height: fit-content;
   margin: 0 0 5vh 0;
   padding: 0;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+  background-color: transparent;
 }
 //Imagem dentro do card
 .imgCard {
@@ -56,50 +57,57 @@ ion-card {
 
 //caixa do nome do produto, preço e quantidade
 ion-card-header {
+  background-color: #fff;
   width: 100%;
-  height: 62%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1vh;
   justify-content: space-between;
+  border-radius: 0;
 }
 //Nome do produto no card
 ion-card-title {
   width: 100%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.3em;
-  font-weight: 400;
+  font-weight: 500;
   color: #000;
-  margin: 3% 1% 0 1%;
+  padding: 3% 1% 0 2%;
+  margin: 0;
 }
 
 //Preço no card
 p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.5em;
-  font-weight: 500;
-  color: #ff5233;
-  margin: 0 2% 0 2%;
+  font-weight: 900;
+  color: var(--customColor3);
+  padding: 0 2% 0 2%;
+  margin: 0;
 }
 
 //"em estoque"
 legend {
-  font-family: "Raleway", sans-serif;
-  font-size: 1em;
-  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1em;
+  font-weight: 600;
   color: #000;
-  margin: 0 2% 2% 2%;
+  padding: 0 2% 2% 2%;
+  margin: 0;
   text-decoration: dotted underline #000 2px;
   text-underline-offset: 4px;
 }
 
 //botão de "ver mais" do card
 ion-button {
+  width: 101%;
+  --background: var(--customColor1);
+  font-size: 1em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
   margin: 0;
   padding: 0;
-  --background: #ff5233;
-  font-size: 1em;
-  font-weight: 500;
 }

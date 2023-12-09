@@ -1,24 +1,44 @@
+/* Google Fonts:
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif; */
+
 ion-header {
-  background-color: #CC1F2D;
+  background-color: var(--customColor5);
+  background-image: url(../../assets/headerBanner.png);
+  background-size: 170px;
+  background-position: 100% 20%;
   display: flex;
-  padding: 0px 0px 2vw 2vw;
-  height: 9vh;
+  padding: 0 0 0 0;
+  margin: 0;
+  height: 7vh;
+  position: fixed;
+  align-items: end;
+}
+
+.headerBar {
+  background-color: var(--customColor4);
+  height: 1vh;
+  width: 100%;
 }
 
 .logo {
-  height: 8vh;
+  height: 7vh;
+  margin: 0 0 0 3%;
+  padding: 1px;
+  border-radius: 6%;
+  background-color: var(--customColor4);
+  position: absolute;
+  z-index: 1000;
 }
 
-
 ion-tabs,
-ion-tab-bar,
-ion-tab-button {
-  --background: #cccccc;
+ion-tab-bar {
+  --background: #333;
 }
 
 ion-tab-button {
   font-size: 0.82rem;
-  --color: #2e2e2e;
-  --color-selected: #CC1F2D;
-  --ripple-color: #CC1F2D;
+  --color: var(--customColor3);
+  --color-selected: var(--customColor5);
+  --ripple-color: var(--customColor5);
 }
