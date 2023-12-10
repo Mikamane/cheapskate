@@ -1,6 +1,6 @@
 /* Google Fonts:
-font-family: 'Playfair Display', serif;
-font-family: 'Raleway', sans-serif; */
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Flex', sans-serif; */
 
 ion-header {
   background-color: var(--customColor5);
@@ -12,7 +12,7 @@ ion-header {
   margin: 0;
   height: 7vh;
   position: fixed;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .headerBar {

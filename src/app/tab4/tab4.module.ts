@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { Tab4PageRoutingModule } from './tab4-routing.module';
+import { Card3ComponentModule } from '../Components/card3/card3.module';
 
 import { Tab4Page } from './tab4.page';
 
@@ -13,7 +14,8 @@ import { Tab4Page } from './tab4.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    Tab4PageRoutingModule
+    Tab4PageRoutingModule,
+    Card3ComponentModule
   ],
   declarations: [Tab4Page]
 })

@@ -12,4 +12,76 @@ export class Tab5Page implements OnInit {
   ngOnInit() {
   }
 
+  favoritos = [
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+  ];
+
+  historico = [
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      titulo: 'Guaratiba - RJ',
+      preco:
+        '900,00',
+    },
+  ];
+
 }

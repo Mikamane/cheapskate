@@ -6,10 +6,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
-
+  lojas = [
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      bairro: 'Guaratiba - RJ',
+      endereco:
+        'Estr. do Monteiro, 1200 - Campo Grande, Rio de Janeiro - RJ, 23045-830',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      bairro: 'Guaratiba - RJ',
+      endereco:
+        'Estr. do Monteiro, 1200 - Campo Grande, Rio de Janeiro - RJ, 23045-830',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      bairro: 'Guaratiba - RJ',
+      endereco:
+        'Estr. do Monteiro, 1200 - Campo Grande, Rio de Janeiro - RJ, 23045-830',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      bairro: 'Guaratiba - RJ',
+      endereco:
+        'Estr. do Monteiro, 1200 - Campo Grande, Rio de Janeiro - RJ, 23045-830',
+    },
+    {
+      imagem: '../../assets/lojaexemplo.jpg',
+      bairro: 'Guaratiba - RJ',
+      endereco:
+        'Estr. do Monteiro, 1200 - Campo Grande, Rio de Janeiro - RJ, 23045-830',
+    },
+  ];
 }

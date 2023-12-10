@@ -1,4 +1,61 @@
+<ion-content>
+  <div class="main">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img class="ProfilePic" src="../../assets/user.png" alt="" />
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h3>Gabriel Bezerra de Freitas</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h4>gabrielbezerra&#64;hotmail.com</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-<ion-content >
+    <h2>Favoritos <i class="fa-solid fa-heart favsIcon"></i></h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="colFav" size="auto" *ngFor="let f of favoritos">
+          <ion-card class="cardsFav">
+            <img src="{{f.imagem}}" />
+            <ion-card-header>
+              <ion-card-title class="cardFavTitle">{{f.titulo}}</ion-card-title>
+              <ion-card-subtitle class="cardFavStitle">
+                R${{f.preco}}
+              </ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
+    <ion-card class="cardHistorico">
+      <ion-card-header>
+        <ion-card-title class="cardHistTitle"
+          >Histórico de compra</ion-card-title
+        >
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let h of historico">
+            <ion-thumbnail slot="start">
+              <img src="{{h.imagem}}" />
+            </ion-thumbnail>
+            <div class="divHist">
+              <p>{{h.titulo}}</p>
+              <p class="precoHist">R${{h.preco}}</p>
+            </div>
+            <ion-button><i class="fa-solid fa-cart-plus"></i></ion-button>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

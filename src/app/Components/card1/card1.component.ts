@@ -12,8 +12,8 @@ export class Card1Component implements OnInit {
   @Input() promo: any;
   @Input() precoPromo: any;
   @Input() estoque: any;
-  constructor() {
-  }
+  @Input() botao: any;
+  constructor() {}
 
   ngOnInit() {}
 }

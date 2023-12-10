@@ -1,10 +1,167 @@
 /* Google Fonts:
-font-family: 'Playfair Display', serif;
-font-family: 'Raleway', sans-serif; */
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Flex', sans-serif; */
 
 ion-content {
-  --background: #f3f3f3;
+  --background: var(--customBackground);
   width: 100vw;
   top: 4vh;
   --padding-bottom: 10vh;
+}
+
+.main {
+  width: 96%;
+  margin: 8vh auto auto auto;
+  color: aliceblue;
+}
+
+ion-col,
+ion-row,
+ion-grid {
+  padding: 0;
+  margin: 0;
+  gap: 2.5%;
+}
+ion-row {
+  margin: 0 2vw 0 2vw;
+}
+
+ion-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.ProfilePic {
+  max-width: 200px;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+h4 {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 6vh 2vw 2vh 2vw;
+  letter-spacing: 2px;
+  color: var(--customColor5);
+}
+
+.favsIcon {
+  position: absolute;
+  color: rgb(226, 40, 86);
+  top: -12%;
+  left: 35%;
+  font-size: 1.2em;
+  text-shadow: 1px 0px 0px rgb(255, 144, 190);
+}
+
+.colFav {
+  justify-content: flex-start;
+  margin: 0 0 2.5vh 0;
+  padding: 0;
+}
+
+.cardsFav {
+  width: 140px;
+  margin: 0;
+}
+
+.cardsFav ion-card-header {
+  margin: 0;
+  padding: 3px 2px 5px 8px;
+}
+
+.cardFavTitle {
+  font-family: "Roboto Flex", serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  padding-top: 0;
+  letter-spacing: 1px;
+  color: var(--customColor1);
+}
+
+.cardFavStitle {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 0.9em;
+  font-weight: 900;
+  padding-top: 5px;
+  margin: 0;
+  letter-spacing: 1px;
+  color: var(--customColor1);
+}
+
+.cardHistorico {
+  background-color: rgb(242, 233, 216, 0.25);
+}
+
+.cardHistTitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 0;
+  letter-spacing: 2px;
+  color: var(--customColor5);
+}
+.divHist {
+
+  width: 72%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+ion-item,
+ion-card-content,
+ion-list {
+  border-radius: 5px;
+  margin-bottom: 5px;
+  --background: var(--customColor5);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+p {
+  margin-top: .6vh;
+  color: #333;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.precoHist {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-weight: 900;
+}
+
+ion-button {
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  clip-path: circle(50% at 50% 50%);
+  top: 10%;
+  right: 2%;
+  width: 14vw;
+  font-size: 1.3em;
+  height: 6.7vh;
+  --background: var(--customColor2);
 }

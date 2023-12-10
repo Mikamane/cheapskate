@@ -1,6 +1,6 @@
 /* Google Fonts:
-font-family: 'Playfair Display', serif;
-font-family: 'Raleway', sans-serif; */
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Flex', sans-serif; */
 
 ion-content {
   --background: var(--customBackground);
@@ -20,7 +20,7 @@ h2 {
   width: 100%;
   text-align: center;
   color: var(--customColor5);
-  font-family: "Raleway", sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   font-weight: 700;
 }
@@ -32,35 +32,6 @@ h5 {
   padding: 0;
   text-align: center;
   color: var(--customColor4);
-  font-family: "Raleway", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
-}
-
-ion-card {
-  margin: 5vh 0 0 0;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
-}
-
-img {
-  height: 30vh;
-  width: 100%;
-  object-fit: cover;
-}
-ion-card-header{
-  margin: 0;
-  padding: 1vh 5px 5px 5px;
-}
-
-ion-card-title {
-  font-family: "Playfair Display", serif;
-  font-size: 1.7em;
-  font-weight: 700;
-}
-
-ion-card-content {
-  font-family: "Playfair Display", serif;
-  font-size: 1.3em;
-  font-weight: 500;
-  margin: 0;
-  padding: 5px 5px 5px 5px;
 }

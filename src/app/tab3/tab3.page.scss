@@ -1,6 +1,6 @@
 /* Google Fonts:
-font-family: 'Playfair Display', serif;
-font-family: 'Raleway', sans-serif; */
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Flex', sans-serif; */
 
 ion-content {
   --background: var(--customBackground);
@@ -27,13 +27,16 @@ ion-grid {
 }
 // título "Mais vendidos"
 h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.75em;
   font-weight: 600;
   margin-top: 6vh;
   margin-bottom: 4vh;
   border-bottom: 4px double;
   color: var(--customColor5);
+}
+i {
+  color: rgb(253, 84, 84);
 }
 
 //Caixa externa do card
@@ -68,7 +71,7 @@ ion-card-header {
 //Nome do produto no card
 ion-card-title {
   width: 100%;
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 1.1em;
   font-weight: 500;
   color: #000;
@@ -88,7 +91,7 @@ ion-card-title {
 
 .old {
   text-decoration: solid line-through;
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 1.1em;
   font-weight: 800;
   margin: 0;
@@ -97,7 +100,7 @@ ion-card-title {
 }
 
 .new {
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 1.6em;
   font-weight: 900;
   color: var(--customColor3);
@@ -107,7 +110,7 @@ ion-card-title {
 
 //"em estoque"
 legend {
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 1.1em;
   font-weight: 600;
   color: #000;

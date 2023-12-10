@@ -1,6 +1,6 @@
 /* Google Fonts:
-font-family: 'Playfair Display', serif;
-font-family: 'Raleway', sans-serif; */
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Flex', sans-serif; */
 
 .produtosContainer {
   --background: var(--customBackground);
@@ -20,7 +20,7 @@ font-family: 'Raleway', sans-serif; */
 #popover-button {
   margin-bottom: 4vh;
   --background: var(--customColor5);
-  font-family: "Raleway", sans-serif;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   width: fit-content;
   color: var(--customColor1);
@@ -37,7 +37,7 @@ ion-popover {
   --min-width: 150px;
 }
 ion-item {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 0.7em;
   width: 150px;

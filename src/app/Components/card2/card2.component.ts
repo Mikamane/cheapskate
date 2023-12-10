@@ -13,6 +13,7 @@ export class Card2Component implements OnInit {
   @Input() precoPromo: any;
   @Input() estoque: any;
   @Input() miniDesc: any;
+  @Input() botao: any;
   constructor() {}
 
   ngOnInit() {}

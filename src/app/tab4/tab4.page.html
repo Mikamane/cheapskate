@@ -4,18 +4,11 @@
     <h5>Horário de funcionamento:</h5>
     <h5>seg. à sáb. | de 08h às 18h</h5>
 
-    <ion-card>
-      <img
-        alt="Silhouette of mountains"
-        src="https://ionicframework.com/docs/img/demos/card-media.png"
-      />
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-      </ion-card-header>
-
-      <ion-card-content>
-        Estr. do Monteiro, 1200 - Campo Grande, Rio de Janeiro - RJ, 23045-830
-      </ion-card-content>
-    </ion-card>
+    <app-card3
+      *ngFor="let l of lojas"
+      imagem="{{l.imagem}}"
+      bairro="{{l.bairro}}"
+      endereco="{{l.endereco}}"
+    />
   </div>
 </ion-content>
