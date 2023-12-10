@@ -17,12 +17,14 @@ img {
 
 // div que engloba todos os itens abaixo do carrossel
 ion-row,
-ion-col,
 ion-grid {
   width: 100%;
   margin: 0;
   padding: 0;
-  gap: 2%;
+  gap: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
@@ -32,82 +34,9 @@ ion-grid {
 // título "Mais vendidos"
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 1.75em;
-  font-weight: 600;
-  margin-bottom: 2vh;
-  color: var(--customColor5);
-}
-
-//Caixa externa do card
-ion-card {
-  min-width: 300px;
-  max-width: 500px;
-  display: flex;
-  height: fit-content;
-  margin: 0 0 5vh 0;
-  padding: 0;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
-  background-color: transparent;
-}
-//Imagem dentro do card
-.imgCard {
-  width: 40%;
-  object-fit: cover;
-}
-
-//caixa do nome do produto, preço e quantidade
-ion-card-header {
-  background-color: #fff;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
-  justify-content: space-between;
-  border-radius: 0;
-}
-//Nome do produto no card
-ion-card-title {
-  width: 100%;
-  font-family: "Playfair Display", serif;
   font-size: 1.3em;
-  font-weight: 500;
-  color: #000;
-  padding: 3% 1% 0 2%;
-  margin: 0;
-}
-
-//Preço no card
-p {
-  font-family: "Playfair Display", serif;
-  font-size: 1.5em;
-  font-weight: 900;
-  color: var(--customColor3);
-  padding: 0 2% 0 2%;
-  margin: 0;
-}
-
-//"em estoque"
-legend {
-  font-family: "Playfair Display", serif;
-  font-size: 1.1em;
   font-weight: 600;
-  color: #000;
-  padding: 0 2% 2% 2%;
-  margin: 0;
-  text-decoration: dotted underline #000 2px;
-  text-underline-offset: 4px;
-}
-
-//botão de "ver mais" do card
-ion-button {
-  width: 101%;
-  --background: var(--customColor1);
-  font-size: 1em;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 4vh;
+  border-bottom: 4px double;
+  color: var(--customColor5);
 }

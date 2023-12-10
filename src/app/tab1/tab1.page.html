@@ -5,89 +5,17 @@
   />
   <div class="main">
     <h2>Mais vendidos</h2>
-
     <ion-grid>
       <ion-row>
-        <ion-col
-          ><ion-card>
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="imgCard"
-            />
-            <ion-card-header>
-              <ion-card-title>Card Title - Nome do produto</ion-card-title>
-              <p>R$500,00</p>
-
-              <legend>Em estoque: 50</legend>
-              <ion-button expand="full">Ver mais...</ion-button>
-            </ion-card-header>
-          </ion-card></ion-col
-        >
-        <ion-col
-          ><ion-card>
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="imgCard"
-            />
-            <ion-card-header>
-              <ion-card-title>Card Title - Nome do produto</ion-card-title>
-              <p>R$500,00</p>
-
-              <legend>Em estoque: 50</legend>
-              <ion-button expand="full">Ver mais...</ion-button>
-            </ion-card-header>
-          </ion-card></ion-col
-        >
-        <ion-col
-          ><ion-card>
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="imgCard"
-            />
-            <ion-card-header>
-              <ion-card-title>Card Title - Nome do produto</ion-card-title>
-              <p>R$500,00</p>
-
-              <legend>Em estoque: 50</legend>
-              <ion-button expand="full">Ver mais...</ion-button>
-            </ion-card-header>
-          </ion-card></ion-col
-        >
-        <ion-col
-          ><ion-card>
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="imgCard"
-            />
-            <ion-card-header>
-              <ion-card-title>Card Title - Nome do produto</ion-card-title>
-              <p>R$500,00</p>
-
-              <legend>Em estoque: 50</legend>
-              <ion-button expand="full">Ver mais...</ion-button>
-            </ion-card-header>
-          </ion-card></ion-col
-        >
-        <ion-col
-          ><ion-card>
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="imgCard"
-            />
-            <ion-card-header>
-              <ion-card-title>Card Title - Nome do produto</ion-card-title>
-              <p>R$500,00</p>
-
-              <legend>Em estoque: 50</legend>
-              <ion-button expand="full">Ver mais...</ion-button>
-            </ion-card-header>
-          </ion-card></ion-col
-        >
+        <app-card1
+          *ngFor="let p of produtos"
+          imagem="{{p.imagem}}"
+          titulo="{{p.titulo}}"
+          preco="{{p.preco}}"
+          promo="{{p.promo}}" 
+          precoPromo="{{p.precoPromo}}"
+          estoque="{{p.quant}}"
+        />
       </ion-row>
     </ion-grid>
   </div>

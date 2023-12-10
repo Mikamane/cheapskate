@@ -4,7 +4,7 @@
       Filtrar por <ion-icon name="filter"></ion-icon
     ></ion-button>
 
-    <ion-popover trigger="popover-button" [dismissOnSelect]="true" side="right">
+    <ion-popover trigger="popover-button" [dismissOnSelect]="true" side="right" size="cover">
       <ng-template>
         <ion-content>
           <ion-list>
@@ -22,53 +22,18 @@
         </ion-content>
       </ng-template>
     </ion-popover>
-
     <ion-grid>
       <ion-row>
-        <ion-col>
-          <ion-card>
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="imgCard"
-            />
-            <ion-card-header>
-              <ion-card-title>Card Title - Nome do produto</ion-card-title>
-              <p>R$500,00</p>
-
-              <legend>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                quasi pariatur obcaecati rerum, fugiat, aliquid impedit
-                similique beatae magni.
-              </legend>
-              <ion-button expand="full"
-                ><h6>Adicionar ao carrinho</h6>
-                <i class="fa-solid fa-cart-plus"></i
-              ></ion-button>
-            </ion-card-header> </ion-card
-        ></ion-col>
-        <ion-col
-          ><ion-card>
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
-              class="imgCard"
-            />
-            <ion-card-header>
-              <ion-card-title>Card Title - Nome do produto</ion-card-title>
-              <p>R$500,00</p>
-
-              <legend>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                quasi pariatur obcaecati rerum, fugiat, aliquid impedit
-                similique beatae magni.
-              </legend>
-              <ion-button expand="full"
-                ><h6>Adicionar ao carrinho</h6>
-                <i class="fa-solid fa-cart-plus"></i
-              ></ion-button>
-            </ion-card-header> </ion-card
-        ></ion-col>
+        <app-card2
+          *ngFor="let p of produtos"
+          imagem="{{p.imagem}}"
+          titulo="{{p.titulo}}"
+          preco="{{p.preco}}"
+          promo="{{p.promo}}"
+          precoPromo="{{p.precoPromo}}"
+          estoque="{{p.quant}}"
+          miniDesc="{{p.miniDesc}}"
+        />
       </ion-row>
     </ion-grid>
   </div>

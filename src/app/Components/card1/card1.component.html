@@ -1,0 +1,18 @@
+<ion-col>
+  <ion-card>
+    <img src="{{ imagem }}" class="imgCard" />
+    <ion-card-header>
+      <ion-card-title>{{ titulo }}</ion-card-title>
+      <p *ngIf="promo === 'nao'">R${{ preco }}</p>
+      <div *ngIf="promo === 'sim'" class="promo">
+        <p class="old">R${{ preco }}</p>
+        <p>R${{ precoPromo }}</p>
+      </div>
+
+      <legend *ngIf="promo === 'sim'">Restam: {{ estoque }}</legend>
+      <ion-button expand="full">
+        <i class="fa-solid fa-cart-plus"></i>
+        </ion-button>
+    </ion-card-header>
+  </ion-card>
+</ion-col>

@@ -11,7 +11,7 @@ font-family: 'Raleway', sans-serif; */
 
 // div que engloba todos os itens abaixo do carrossel
 .main {
-  width: 96%;
+  width: 94%;
   margin: auto;
   margin-top: 6vh;
 }
@@ -24,108 +24,32 @@ font-family: 'Raleway', sans-serif; */
   display: flex;
   width: fit-content;
   color: var(--customColor1);
+  font-size: 0.6em;
 }
 //Icon do filtro
 ion-icon {
   margin-left: 5%;
-  font-size: 1.8rem;
+  font-size: 1.8em;
 }
 
 //Conteudo do filtro
+ion-popover {
+  --min-width: 150px;
+}
 ion-item {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
+  font-size: 0.7em;
+  width: 150px;
 }
 
-//----------Edição do card abaixo------------
-
 ion-row,
-ion-col,
 ion-grid {
   width: 100%;
   margin: 0;
   padding: 0;
-  gap: 2%;
-  border-radius: 50px;
-}
-
-//Caixa externa do card
-ion-card {
-  border-radius: 0;
-  min-width: 300px;
-  max-width: 500px;
+  gap: 3%;
   display: flex;
-  flex-direction: column;
-  height: fit-content;
-  margin: 0 0 5vh 0;
-  padding: 0;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
-  background-color: #fff;
-}
-//Imagem dentro do card
-.imgCard {
-  width: 100%;
-  height: 38%;
-  object-fit: cover;
-}
-
-//caixa do nome do produto, preço e quantidade
-ion-card-header {
-  width: 100%;
-  height: 62%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5vh;
-  justify-content: space-between;
-}
-//Nome do produto no card
-ion-card-title {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4em;
-  font-weight: 800;
-  color: var(--customColor2);
-  margin: 3% 2% 0 2%;
-}
-
-//Preço no card
-p {
-  font-family: "Playfair Display", serif;
-  font-size: 1.5em;
-  font-weight: 900;
-  color: var(--customColor3);
-  margin: 0 2% 0 2%;
-}
-
-//"Mini-Descrição"
-legend {
-  font-family: "Playfair Display", serif;
-  font-size: 1.1em;
-  font-weight: 600;
-  color: var(--customColor2);
-  margin: 0 2% 0 2%;
-}
-
-//botão de "ver mais" do card
-ion-button {
-  margin: 0;
-  padding: 0;
-  --background: var(--customColor1);
-  display: flex;
-  justify-content: space-evenly;
-  font-family: "Raleway", serif;
-}
-
-h6 {
-  margin: 0;
-  padding: 1%;
-  font-size: 1.1em;
-  font-weight: 500;
-  text-decoration: underline;
-}
-//icon do button do card
-i {
-  text-decoration: none;
-  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
 }

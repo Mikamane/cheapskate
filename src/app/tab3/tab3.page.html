@@ -1,3 +1,36 @@
+<ion-content>
+  <div class="main">
+    <h2>Promoções do dia</h2>
 
-<ion-content >
+    <ion-grid>
+      <ion-row>
+        <app-card2
+          *ngFor="let p of produtos"
+          imagem="{{p.imagem}}"
+          titulo="{{p.titulo}}"
+          preco="{{p.preco}}"
+          promo="{{p.promo}}"
+          precoPromo="{{p.precoPromo}}"
+          estoque="{{p.quant}}"
+          miniDesc="{{p.miniDesc}}"
+        />
+      </ion-row>
+    </ion-grid>
+
+    <h2>Ofertas especiais</h2>
+
+    <ion-grid>
+      <ion-row>
+        <app-card1
+          *ngFor="let p of produtos"
+          imagem="{{p.imagem}}"
+          titulo="{{p.titulo}}"
+          preco="{{p.preco}}"
+          promo="{{p.promo}}"
+          precoPromo="{{p.precoPromo}}"
+          estoque="{{p.quant}}"
+        />
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
