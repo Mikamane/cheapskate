@@ -12,6 +12,10 @@ ion-content {
 .main {
   width: 96%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h2 {

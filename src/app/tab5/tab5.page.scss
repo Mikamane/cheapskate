@@ -63,15 +63,16 @@ h2 {
   margin: 6vh 2vw 2vh 2vw;
   letter-spacing: 2px;
   color: var(--customColor5);
+  width: fit-content;
 }
 
 .favsIcon {
   position: absolute;
   color: rgb(226, 40, 86);
   top: -12%;
-  left: 35%;
+  left: 105%;
   font-size: 1.2em;
-  text-shadow: 1px 0px 0px rgb(255, 144, 190);
+  text-shadow: 1px 0px 0px rgba(255, 144, 190, 0.692)
 }
 
 .colFav {

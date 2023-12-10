@@ -9,8 +9,9 @@
         <p>R${{ precoPromo }}</p>
       </div>
 
-      <legend *ngIf="promo === 'sim'">Restam: {{ estoque }}</legend>
-      <ion-button expand="full">
+      <legend *ngIf="estoque >= 11">Em estoque: {{ estoque }}</legend>
+      <legend *ngIf="estoque <= 10">Restam: {{ estoque }}</legend>
+      <ion-button expand="full" size="small">
         {{botao}}
         </ion-button>
     </ion-card-header>

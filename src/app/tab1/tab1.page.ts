@@ -16,7 +16,7 @@ export class Tab1Page {
       preco: '649,99',
       promo: 'nao',
       precoPromo: '549,99',
-      quant: '9',
+      quant: '11',
       miniDesc:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quasi pariatur obcaecati rerum, fugiat, aliquid impedit similique beatae magni.',
     },
