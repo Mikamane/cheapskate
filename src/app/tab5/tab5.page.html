@@ -23,7 +23,7 @@
       <ion-row>
         <ion-col class="colFav" size="auto" *ngFor="let f of favoritos">
           <ion-card class="cardsFav">
-            <img src="{{f.imagem}}" />
+            <img class="cardImg" src="{{f.imagem}}" />
             <ion-card-header>
               <ion-card-title class="cardFavTitle">{{f.titulo}}</ion-card-title>
               <ion-card-subtitle class="cardFavStitle">
@@ -49,7 +49,7 @@
               <img src="{{h.imagem}}" />
             </ion-thumbnail>
             <div class="divHist">
-              <p>{{h.titulo}}</p>
+              <p class="titleHist">{{h.titulo}}</p>
               <p class="precoHist">R${{h.preco}}</p>
             </div>
             <ion-button><i class="fa-solid fa-cart-plus"></i></ion-button>

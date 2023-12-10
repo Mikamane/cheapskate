@@ -2,30 +2,33 @@
 font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Flex', sans-serif; */
 ion-card {
-  margin: 5vh 2vw 0 2vw;
+  margin: 5vh 3vw 5vh 2vw;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+  background-color: #00000034;
 }
 
 img {
-  height: 30vh;
-  width: 100%;
+  min-width: 100%;
   object-fit: cover;
 }
 ion-card-header {
   margin: 0;
-  padding: 1vh 5px 5px 5px;
+  padding: 1vh 8px 8px 8px;
+  
 }
 
 ion-card-title {
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 1.7em;
   font-weight: 700;
+  color: #fff;
 }
 
 ion-card-content {
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: 1.3em;
   font-weight: 500;
   margin: 0;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 8px 8px 8px;
+  color: var(--customColor4);
 }

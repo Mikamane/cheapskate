@@ -25,8 +25,10 @@ ion-card {
 }
 //Imagem dentro do card
 .imgCard {
-  height: 10vh;
+  min-width: 300px;
+  max-height: 20vh;
   object-fit: cover;
+  object-position: top;
 }
 
 //caixa do nome do produto, preço e quantidade
@@ -101,7 +103,9 @@ legend {
   font-size: 1em;
   font-weight: 400;
   color: var(--customColor2);
-  margin: 0 2% 0 2%;
+  margin: 3% 2% 8% 2%;
+  height: 45px;
+  overflow: scroll;
 }
 
 //botão de "ver mais" do card
