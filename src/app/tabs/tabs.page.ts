@@ -11,6 +11,6 @@ export class TabsPage {
   iconType = 'cart-outline';
 
   goTocart() {
-    this.iconType = 'carta';
+    this.iconType = 'cart';
   }
 }

@@ -1,8 +1,9 @@
 <ion-header>
   <div class="headerBar"></div>
   <img src="../../assets/logo.png" class="logo" />
-  <ion-button class="cartButton" shape="round"
-    ><ion-icon class="cartIcon" name={{iconType}}></ion-icon
+
+  <ion-button (click)="goTocart()" class="cartButton" shape="round"
+    ><ion-icon class="cartIcon" name="{{iconType}}"></ion-icon
   ></ion-button>
 </ion-header>
 
