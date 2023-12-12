@@ -45,7 +45,15 @@ ion-header {
   z-index: 99;
 }
 
-ion-badge{
+ion-modal,
+ng-template,
+ion-card-content,
+ion-card,
+ion-list {
+  overflow-y: scroll;
+}
+
+ion-badge {
   position: absolute;
   top: 120%;
   right: 2%;
