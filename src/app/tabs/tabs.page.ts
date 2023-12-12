@@ -8,9 +8,15 @@ import { Component } from '@angular/core';
 export class TabsPage {
   constructor() {}
 
-  iconType = 'cart-outline';
+  cartItem = 0
 
-  goTocart() {
-    this.iconType = 'cart';
+  addItem(){
+    this.cartItem++
+  }
+
+  isModalOpen = false;
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
   }
 }

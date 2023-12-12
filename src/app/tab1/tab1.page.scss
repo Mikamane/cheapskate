@@ -9,10 +9,27 @@ ion-content {
   --padding-bottom: 10vh;
 }
 
-img {
-  width: 100vw;
-  max-height: 50vh;
+swiper-container {
+  margin-top: 3vh;
+}
+
+swiper-slide img {
+  height: 35vh;
   object-fit: cover;
+}
+swiper-container::part(pagination) {
+  background-color: #333333c9;
+  width: 18%;
+  left: 40%;
+  border-radius: 50px;
+  padding-bottom: 2px;
+}
+swiper-container::part(bullet) {
+  background-color: white;
+}
+
+swiper-container::part(bullet-active) {
+  background-color: var(--customColor5);
 }
 
 // div que engloba todos os itens abaixo do carrossel
@@ -33,7 +50,7 @@ ion-grid {
 }
 // título "Mais vendidos"
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.3em;
   font-weight: 600;
   margin-bottom: 4vh;

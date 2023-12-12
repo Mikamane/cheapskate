@@ -1,8 +1,10 @@
 <ion-content>
-  <img
-    alt="Silhouette of mountains"
-    src="https://ionicframework.com/docs/img/demos/card-media.png"
-  />
+  <swiper-container autoplay="3000" speed="800" loop="true" pagination="true">
+    <swiper-slide><img src="../../assets/banner1.jpg" /></swiper-slide>
+    <swiper-slide><img src="../../assets/banner2.jpg" /></swiper-slide>
+    <swiper-slide><img src="../../assets/banner3.jpg" /></swiper-slide>
+  </swiper-container>
+
   <div class="main">
     <h2>Mais vendidos</h2>
     <ion-grid>
@@ -12,10 +14,10 @@
           imagem="{{p.imagem}}"
           titulo="{{p.titulo}}"
           preco="{{p.preco}}"
-          promo="{{p.promo}}" 
+          promo="{{p.promo}}"
           precoPromo="{{p.precoPromo}}"
           estoque="{{p.quant}}"
-          botao="Ver mais..."
+          botao="Adicionar ao carrinho"
         />
       </ion-row>
     </ion-grid>
