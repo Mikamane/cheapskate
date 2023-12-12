@@ -15,4 +15,8 @@ export class AddToCartService {
   getItems() {
     return this.items;
   }
+
+  clearItems() {
+    this.items = 0;
+  }
 }

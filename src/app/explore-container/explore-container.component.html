@@ -1,37 +1,53 @@
-<!-- Modal do carrinho -->
-<ion-content>
+<ion-content class="caixaModal">
   <ion-badge color="danger">{{ cartService.getItems() }}</ion-badge>
   <ion-button (click)="setOpen(true)" class="cartButton" shape="round">
     <ion-icon class="cartIcon" name="cart"></ion-icon
   ></ion-button>
+
+  <!-- isModalOpen -->
   <ion-modal [isOpen]="isModalOpen">
     <ng-template>
       <ion-header>
         <ion-toolbar>
           <ion-title>Carrinho de compras</ion-title>
           <ion-buttons slot="end">
-            <ion-button (click)="setOpen(false)">Fechar</ion-button>
+            <ion-button class="closeCart" (click)="setOpen(false)"
+              >Fechar</ion-button
+            >
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
 
-      <ion-card class="cardHistorico">
-        <ion-card-content>
-          <ion-list>
-            <ion-item
-              *ngFor="let f of favoritos | slice : 0 : cartService.getItems()"
+      <ion-content class="ion-padding">
+        <ion-card class="cardHistorico">
+          <ion-card-content class="listaCart">
+            <ion-list>
+              <h3 *ngIf="cartService.getItems() == 0">
+                Não há produtos no carrinho
+              </h3>
+              <!-- slice : 0 : cartService.getItems() -->
+              <ion-item
+                *ngFor="let f of carrinho | slice : 0 : cartService.getItems()"
+              >
+                <ion-thumbnail slot="start">
+                  <img src="{{ f.imagem }}" />
+                </ion-thumbnail>
+                <div class="divHist">
+                  <p class="titleHist">{{ f.titulo }}</p>
+                  <p class="precoHist">R${{ f.preco }}</p>
+                </div>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+          <ion-buttons class="actionsCart" *ngIf="cartService.getItems() != 0">
+            <h2>Total: R$5000,00</h2>
+            <ion-button shape="round" class="clear" (click)="presentAlert()"
+              >Limpar Carrinho</ion-button
             >
-              <ion-thumbnail slot="start">
-                <img src="{{ f.imagem }}" />
-              </ion-thumbnail>
-              <div class="divHist">
-                <p class="titleHist">{{ f.titulo }}</p>
-                <p class="precoHist">R${{ f.preco }}</p>
-              </div>
-            </ion-item>
-          </ion-list>
-        </ion-card-content>
-      </ion-card>
+            <ion-button shape="round" class="Buy">Comprar</ion-button>
+          </ion-buttons>
+        </ion-card>
+      </ion-content>
     </ng-template>
   </ion-modal>
 </ion-content>

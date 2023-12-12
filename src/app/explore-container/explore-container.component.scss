@@ -1,15 +1,25 @@
+.caixaModal {
+  top: 6vh;
+  position: absolute;
+  z-index: 9999;
+  --background: #ffffff00;
+  background-color: #ffffff00;
+  height: 13vh;
+}
+
 .cartButton {
   position: absolute;
-  top: 130%;
-  right: 2%;
   width: fit-content;
   --background: var(--customColor5);
   --padding-end: 10px;
   --padding-start: 10px;
   --padding-top: 10px;
   --padding-bottom: 10px;
-  margin: 0;
+  margin: 0 0 0 0;
+  top: 17%;
+  right: 1%;
   z-index: 99;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 }
 
 ion-modal,
@@ -22,8 +32,8 @@ ion-list {
 
 ion-badge {
   position: absolute;
-  top: 120%;
-  right: 2%;
+  top: 15%;
+  right: 1%;
   z-index: 100;
 }
 
@@ -32,4 +42,125 @@ ion-badge {
   color: var(--customColor1);
   padding: 0;
   margin: 0;
+}
+
+ion-title {
+  font-family: "Roboto Flex", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.closeCart {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ion-padding {
+  --background: var(--customColor2);
+}
+
+ion-toolbar {
+  --background: var(--customColor4);
+}
+
+h3 {
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px 30px 15px 30px;
+}
+
+.cardHistorico {
+  margin-top: 0;
+  padding: 0;
+  margin: 0;
+  background-color: var(--customColor2);
+  box-shadow: none;
+
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.listaCart {
+  height: 62vh;
+  border-radius: 10px;
+}
+
+ion-list {
+  border-radius: 10px;
+}
+
+ion-item {
+  margin-bottom: 2vh;
+}
+
+.divHist {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.titleHist {
+  font-size: 1.1em;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+}
+
+.precoHist {
+  font-size: 1em;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: end;
+}
+
+h2 {
+  color: #fff;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1vh;
+  border-top: 1px solid #fff;
+  padding: 1.5vh 0 2vh 10px;
+  width: 100%;
+  text-align: start;
+}
+
+.actionsCart {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--customColor2);
+}
+
+.clear {
+  color: #ffffff;
+  --background: rgb(255, 20, 31);
+  width: 100%;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  --padding-top: 3%;
+  --padding-bottom: 3%;
+  margin-bottom: 2vh;
+  --border-radius: 5px;
+}
+
+.Buy {
+  color: #ffffff;
+  --background: var(--customColor1);
+  width: 100%;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  --padding-top: 5%;
+  --padding-bottom: 5%;
+  --border-radius: 5px;
 }
