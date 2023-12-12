@@ -31,42 +31,6 @@ ion-header {
   z-index: 1000;
 }
 
-.cartButton {
-  position: absolute;
-  top: 130%;
-  right: 2%;
-  width: fit-content;
-  --background: var(--customColor5);
-  --padding-end: 10px;
-  --padding-start: 10px;
-  --padding-top: 10px;
-  --padding-bottom: 10px;
-  margin: 0;
-  z-index: 99;
-}
-
-ion-modal,
-ng-template,
-ion-card-content,
-ion-card,
-ion-list {
-  overflow-y: scroll;
-}
-
-ion-badge {
-  position: absolute;
-  top: 120%;
-  right: 2%;
-  z-index: 100;
-}
-
-.cartIcon {
-  font-size: 2.5em;
-  color: var(--customColor1);
-  padding: 0;
-  margin: 0;
-}
-
 ion-tabs,
 ion-tab-bar {
   --background: #333;

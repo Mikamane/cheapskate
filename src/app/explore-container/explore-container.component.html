@@ -1,4 +1,37 @@
-<div id="container">
-  <strong>{{ name }}</strong>
-  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-</div>
+<!-- Modal do carrinho -->
+<ion-content>
+  <ion-badge color="danger">{{ cartService.getItems() }}</ion-badge>
+  <ion-button (click)="setOpen(true)" class="cartButton" shape="round">
+    <ion-icon class="cartIcon" name="cart"></ion-icon
+  ></ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Carrinho de compras</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Fechar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-card class="cardHistorico">
+        <ion-card-content>
+          <ion-list>
+            <ion-item
+              *ngFor="let f of favoritos | slice : 0 : cartService.getItems()"
+            >
+              <ion-thumbnail slot="start">
+                <img src="{{ f.imagem }}" />
+              </ion-thumbnail>
+              <div class="divHist">
+                <p class="titleHist">{{ f.titulo }}</p>
+                <p class="precoHist">R${{ f.preco }}</p>
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </ion-modal>
+</ion-content>
