@@ -34,13 +34,13 @@
                 </ion-thumbnail>
                 <div class="divHist">
                   <p class="titleHist">{{ f.titulo }}</p>
-                  <p class="precoHist">R${{ f.preco }}</p>
+                  <p class="precoHist">R${{ f.preco | number : "1.2-2" }}</p>
                 </div>
               </ion-item>
             </ion-list>
           </ion-card-content>
           <ion-buttons class="actionsCart" *ngIf="cartService.getItems() != 0">
-            <h2>Total: R$5000,00</h2>
+            <h2>Total: R${{ SomarPreco() | number : "1.2-2" }}</h2>
             <ion-button shape="round" class="clear" (click)="presentAlert()"
               >Limpar Carrinho</ion-button
             >

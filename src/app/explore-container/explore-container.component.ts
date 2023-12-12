@@ -45,13 +45,23 @@ export class ExploreContainerComponent {
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }
-  
+
+  total: number = 0;
+
+  SomarPreco() {
+    this.total = 0;
+    for (let index = 0; index < this.cartService.getItems(); index++) {
+      const element = this.carrinho[index];
+      this.total = this.total + element.preco;
+    }
+    return this.total;
+  }
 
   carrinho = [
     {
       imagem: '../../assets/skate1.png',
       titulo: 'Skate Ahead Completo Amador 8.0 Bones Head Pilot',
-      preco: '419,90',
+      preco: 419.9,
       promo: 'nao',
       precoPromo: '319,90',
       quant: '12',
@@ -61,7 +71,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/skate5.png',
       titulo: 'Skate Purple Iniciante Donut I',
-      preco: '399,90',
+      preco: 399.9,
       promo: 'nao',
       precoPromo: '319,90',
       quant: '7',
@@ -71,7 +81,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item1.png',
       titulo: 'Rolamento Black Sheep Gold',
-      preco: '56,90',
+      preco: 56.9,
       promo: 'nao',
       precoPromo: '26,90',
       quant: '20',
@@ -81,7 +91,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item4.png',
       titulo: 'Rolamento Nineclouds High Speed',
-      preco: '64,90',
+      preco: 64.9,
       promo: 'nao',
       precoPromo: '64,90',
       quant: '26',
@@ -90,7 +100,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item5.png',
       titulo: 'Rolamento Bronson G2',
-      preco: '199,90',
+      preco: 199.9,
       promo: 'nao',
       precoPromo: '99,90',
       quant: '13',
@@ -100,7 +110,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item9.png',
       titulo: 'Lixa Emborrachada Folha Roxa Cannabis',
-      preco: '51,22',
+      preco: 51.22,
       promo: 'nao',
       precoPromo: '41,22',
       quant: '30',
@@ -110,7 +120,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item10.png',
       titulo: 'Lixa Emborrachada Green',
-      preco: '59,90',
+      preco: 59.9,
       promo: 'nao',
       precoPromo: '25,90',
       quant: '22',
@@ -120,7 +130,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item12.png',
       titulo: 'Capacete Purple Logo Preto',
-      preco: '129,90',
+      preco: 129.9,
       promo: 'nao',
       precoPromo: '100,90',
       quant: '18',
@@ -130,7 +140,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item13.png',
       titulo: 'Capacete ARS Rookie Pink',
-      preco: '139,90',
+      preco: 139.9,
       promo: 'nao',
       precoPromo: '139,90',
       quant: '6',
@@ -140,7 +150,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/skate6.png',
       titulo: 'Skate Montado Viva Meu Primeiro Amor Green White',
-      preco: '299,90',
+      preco: 299.9,
       promo: 'nao',
       precoPromo: '169,90',
       quant: '3',
@@ -150,7 +160,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/skate7.png',
       titulo: 'Semi Long Hondar 31 Polegadas Be Happy Verde',
-      preco: '539,91',
+      preco: 539.91,
       promo: 'nao',
       precoPromo: '339,91',
       quant: '5',
@@ -160,7 +170,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/skate8.png',
       titulo: 'Skate Montado CBGANG SKTBR Bomb Azul',
-      preco: '206,91',
+      preco: 206.91,
       promo: 'nao',
       precoPromo: '176,91',
       quant: '15',
@@ -170,7 +180,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item7.png',
       titulo: 'Lixa Hondar Pespective',
-      preco: '67,41',
+      preco: 67.41,
       promo: 'nao',
       precoPromo: '37,41',
       quant: '35',
@@ -180,7 +190,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item8.png',
       titulo: 'Lixa Emborrachada Bud',
-      preco: '44,91',
+      preco: 44.91,
       promo: 'nao',
       precoPromo: '34,91',
       quant: '17',
@@ -190,7 +200,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/skate9.png',
       titulo: 'Skate Montado Maple Flip Skateboards Pop Shroom Purple',
-      preco: '485,91',
+      preco: 485.91,
       promo: 'nao',
       precoPromo: '410,91',
       quant: '13',
@@ -200,7 +210,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/skate10.png',
       titulo: 'Skate Montado CBGANG LINUX',
-      preco: '202,41',
+      preco: 202.41,
       promo: 'nao',
       precoPromo: '132,41',
       quant: '7',
@@ -210,7 +220,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item11.png',
       titulo: 'Lixa Emborrachada Snake',
-      preco: '51,22',
+      preco: 51.22,
       promo: 'nao',
       precoPromo: '31,22',
       quant: '16',
@@ -220,7 +230,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item16.png',
       titulo: 'Parafuso De Base Fun',
-      preco: '25,00',
+      preco: 25.0,
       promo: 'nao',
       precoPromo: '20,00',
       quant: '75',
@@ -230,7 +240,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item17.png',
       titulo: 'Parafuso De Base Alen Independent',
-      preco: '45,00',
+      preco: 45.0,
       promo: 'nao',
       precoPromo: '30,00',
       quant: '40',
@@ -239,7 +249,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item18.png',
       titulo: 'Parafuso De Base Street',
-      preco: '19,00',
+      preco: 19.0,
       promo: 'nao',
       precoPromo: '15,00',
       quant: '9',
@@ -249,7 +259,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/skate2.png',
       titulo: 'Skate Ahead Completo Amador 8.0 Bones Head Apache',
-      preco: '419,90',
+      preco: 419.9,
       promo: 'sim',
       precoPromo: '359,90',
       quant: '8',
@@ -259,7 +269,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/skate3.png',
       titulo: 'Skate Montado Zero Single Skull 8" - Shape de Maple',
-      preco: '522,99',
+      preco: 522.99,
       promo: 'sim',
       precoPromo: '392,99',
       quant: '13',
@@ -268,7 +278,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item3.png',
       titulo: 'Rolamento Bronson Alexis Ramirez',
-      preco: '359,91',
+      preco: 359.91,
       promo: 'sim',
       precoPromo: '255,91',
       quant: '5',
@@ -278,7 +288,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item14.png',
       titulo: 'Capacete Purple Série Bear Azul Tifanny',
-      preco: '129,90',
+      preco: 129.9,
       promo: 'sim',
       precoPromo: '89,90',
       quant: '11',
@@ -288,7 +298,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item15.png',
       titulo: 'Kit Proteção ARS',
-      preco: '239,90',
+      preco: 239.9,
       promo: 'sim',
       precoPromo: '200,90',
       quant: '20',
@@ -298,7 +308,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/skate4.png',
       titulo: 'Skate Montando Burkys Iniciante',
-      preco: '219,99',
+      preco: 219.99,
       promo: 'sim',
       precoPromo: '149,99',
       quant: '17',
@@ -308,7 +318,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item6.png',
       titulo: 'Lixa Shake Junt',
-      preco: '99,38',
+      preco: 99.38,
       promo: 'sim',
       precoPromo: '79,38',
       quant: '9',
@@ -317,7 +327,7 @@ export class ExploreContainerComponent {
     {
       imagem: '../../assets/item2.png',
       titulo: 'Rolamento Black Sheep Importado Red',
-      preco: '40,41',
+      preco: 40.41,
       promo: 'sim',
       precoPromo: '20,41',
       quant: '9',
