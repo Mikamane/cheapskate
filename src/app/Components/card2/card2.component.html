@@ -15,8 +15,9 @@
       <legend *ngIf="promo === 'nao'">
         {{ miniDesc }}
       </legend>
-      <ion-button expand="full"
-        size="medium">{{botao}}</ion-button>
+      <ion-button (click)="addToCart()" expand="full" size="medium">{{
+        botao
+      }}</ion-button>
     </ion-card-header>
   </ion-card>
 </ion-col>

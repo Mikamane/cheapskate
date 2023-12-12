@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
+import { AddToCartService } from 'src/app/Services/add-to-cart.service';
 
 @Component({
   selector: 'app-card1',
@@ -6,6 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card1.component.scss'],
 })
 export class Card1Component implements OnInit {
+
+  cartService = inject(AddToCartService)
+  
   @Input() imagem: any;
   @Input() titulo: any;
   @Input() preco: any;
@@ -16,4 +20,8 @@ export class Card1Component implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  addToCart(){
+    this.cartService.addToCart();
+  }
 }

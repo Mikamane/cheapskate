@@ -11,7 +11,7 @@
 
       <legend *ngIf="estoque >= 11">Em estoque: {{ estoque }}</legend>
       <legend *ngIf="estoque <= 10">Restam: {{ estoque }}</legend>
-      <ion-button expand="full" size="small">
+      <ion-button (click)="addToCart()" expand="full" size="small">
         {{botao}}
         </ion-button>
     </ion-card-header>

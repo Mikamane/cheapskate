@@ -52,7 +52,7 @@
               <p class="titleHist">{{h.titulo}}</p>
               <p class="precoHist">R${{h.preco}}</p>
             </div>
-            <ion-button><i class="fa-solid fa-cart-plus"></i></ion-button>
+            <ion-button (click)="addToCart()"><i class="fa-solid fa-cart-plus"></i></ion-button>
           </ion-item>
         </ion-list>
       </ion-card-content>

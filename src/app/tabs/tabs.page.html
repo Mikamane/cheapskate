@@ -2,7 +2,7 @@
   <div class="headerBar"></div>
   <img src="../../assets/logo.png" class="logo" />
 
-  <ion-badge color="danger">{{cartItem}}</ion-badge>
+  <ion-badge color="danger">{{cartService.getItems()}}</ion-badge>
 
   <!-- Modal do carrinho -->
   <ion-button (click)="setOpen(true)" class="cartButton" shape="round">
@@ -18,14 +18,24 @@
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
-      <ion-content class="ion-padding">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum
-          quidem recusandae ducimus quos reprehenderit. Veniam, molestias quos,
-          dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
-          dicta.
-        </p>
-      </ion-content>
+
+      <ion-card class="cardHistorico">
+        <ion-card-content>
+          <ion-list>
+            <ion-item
+              *ngFor="let f of favoritos | slice:0:cartService.getItems()"
+            >
+              <ion-thumbnail slot="start">
+                <img src="{{f.imagem}}" />
+              </ion-thumbnail>
+              <div class="divHist">
+                <p class="titleHist">{{f.titulo}}</p>
+                <p class="precoHist">R${{f.preco}}</p>
+              </div>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
     </ng-template>
   </ion-modal>
   <!-- ----------------- -->

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { AddToCartService } from '../Services/add-to-cart.service';
 
 @Component({
   selector: 'app-tab5',
@@ -7,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab5Page implements OnInit {
   constructor() {}
+
+  cartService = inject(AddToCartService);
+
+  addToCart() {
+    this.cartService.addToCart();
+  }
 
   ngOnInit() {}
 
