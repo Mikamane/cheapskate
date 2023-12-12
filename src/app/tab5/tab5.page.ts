@@ -15,6 +15,8 @@ export class Tab5Page implements OnInit {
     this.cartService.addToCart();
   }
 
+  logado = false
+  
   ngOnInit() {}
 
   favoritos = [
