@@ -1,5 +1,13 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { AddToCartService } from '../Services/add-to-cart.service';
+import {
+  Auth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signOut,
+} from '@angular/fire/auth';
 
 @Component({
   selector: 'app-tab5',
@@ -7,7 +15,7 @@ import { AddToCartService } from '../Services/add-to-cart.service';
   styleUrls: ['./tab5.page.scss'],
 })
 export class Tab5Page implements OnInit {
-  constructor() {}
+  constructor(private auth: Auth) {}
 
   cartService = inject(AddToCartService);
 
@@ -15,8 +23,12 @@ export class Tab5Page implements OnInit {
     this.cartService.addToCart();
   }
 
-  logado = false
-  
+  logado = false;
+  cad = false;
+  changeForm() {
+    this.cad = !this.cad;
+  }
+
   ngOnInit() {}
 
   favoritos = [
@@ -113,4 +125,98 @@ export class Tab5Page implements OnInit {
         'Os novos rolamentos Black Sheep são fabricados na CHINA na principal faabrica de rolamentos do Mundo, usando tecnologia e materias de alta qualidade.',
     },
   ];
+
+  user: any = { nome: '', foto: '', email: '' };
+  msg: string = '';
+
+  isToastOpen = false;
+
+  setOpen(isOpen: boolean) {
+    this.isToastOpen = isOpen;
+  }
+
+  logar(email: any, senha: any) {
+    this.msg = '';
+    if (email == '' || senha == '') {
+      this.msg = 'Preencha todos os campos!';
+      this.setOpen(true);
+    } else {
+      signInWithEmailAndPassword(this.auth, email, senha)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          this.user.nome = user.displayName;
+          this.user.foto = user.photoURL;
+          this.user.email = user.email;
+
+          this.logado = true;
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+        });
+    }
+  }
+
+  loginComGoogle() {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(this.auth, provider)
+      .then((result) => {
+        console.log(result);
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        console.log(result);
+        this.user.nome = result.user.displayName;
+        this.user.foto = result.user.photoURL;
+        this.user.email = result.user.email;
+        this.logado = true;
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+  }
+
+  logout() {
+    this.logado = false;
+    this.logoutComGoogle();
+  }
+
+  logoutComGoogle() {
+    signOut(this.auth);
+  }
+
+  cadUser(email: any, senha: any, Rsenha: any) {
+    this.msg = '';
+    if (email == '' || senha == '' || Rsenha == '') {
+      this.msg = 'Preencha todos os campos!';
+      this.setOpen(true);
+    } else if (senha != Rsenha) {
+      this.msg = 'As senhas precisam ser iguais!';
+      this.setOpen(true);
+    } else {
+      this.msg = 'Usuário cadastrado com sucesso!';
+      this.setOpen(true);
+      this.changeForm();
+
+      createUserWithEmailAndPassword(this.auth, email, senha)
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+        });
+    }
+  }
 }

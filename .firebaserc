@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cheapskate-37a12": {
+      "hosting": {
+        "app": [
+          "cheapskate-37a12"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cheapskate-37a12"
+  }
+}

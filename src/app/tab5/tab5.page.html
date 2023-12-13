@@ -1,21 +1,131 @@
 <ion-content>
+  <ion-toast
+    [isOpen]="isToastOpen"
+    message="{{ msg }}"
+    [duration]="5000"
+    (didDismiss)="setOpen(false)"
+  ></ion-toast>
+  <div class="loginBox" *ngIf="!logado">
+    <div class="formLogin" *ngIf="!cad">
+      <h1>Para acessar o perfil...</h1>
+      <h5>Entre com email e senha:</h5>
+      <ion-input
+        type="email"
+        fill="solid"
+        label="Email"
+        placeholder="exemplo@provedor.com"
+        labelPlacement="floating"
+        errorText="Email inválido"
+        ngModel
+        email
+        #email
+      ></ion-input>
+      <ion-input
+        type="password"
+        label="Senha"
+        fill="solid"
+        labelPlacement="floating"
+        minlength="6"
+        errorText="Senha inválida"
+        ngModel
+        password
+        #senha
+      ></ion-input>
+      <ion-button class="buttonLogin" (click)="logar(email.value, senha.value)"
+        >Entrar</ion-button
+      >
+      <legend>
+        Não tem cadastro? <a (click)="changeForm()">Cadastre-se</a>
+      </legend>
 
+      <p class="divisorLogin">___________________ Ou ___________________</p>
+
+      <ion-button class="loginGoogle" size="large" (click)="loginComGoogle()">
+        <ion-thumbnail class="googleIcon">
+          <img src="../../../assets/google-icon.png" /> </ion-thumbnail
+        >Entre com Google</ion-button
+      >
+    </div>
+
+    <div class="formLogin" *ngIf="cad">
+      <h1>Cadastre-se por aqui!</h1>
+      <h5>Informe seu email e senha:</h5>
+      <ion-input
+        type="email"
+        fill="solid"
+        label="Email"
+        placeholder="exemplo@provedor.com"
+        labelPlacement="floating"
+        errorText="Email inválido"
+        ngModel
+        email
+        #email
+      ></ion-input>
+      <ion-input
+        type="password"
+        label="Senha"
+        fill="solid"
+        labelPlacement="floating"
+        minlength="6"
+        helperText="Mínimo de 6 caracteres"
+        errorText="Senha inválida"
+        ngModel
+        password
+        #senha
+      ></ion-input>
+      <ion-input
+        type="password"
+        label="Repita sua senha"
+        fill="solid"
+        labelPlacement="floating"
+        minlength="6"
+        helperText="Mínimo de 6 caracteres"
+        errorText="Senha inválida"
+        ngModel
+        password
+        #Rsenha
+      ></ion-input>
+      <ion-button
+        class="buttonLogin"
+        (click)="cadUser(email.value, senha.value, Rsenha.value)"
+        >Cadastrar</ion-button
+      >
+      <legend>
+        Já possui um cadastro? <a (click)="changeForm()">Fazer login</a>
+      </legend>
+    </div>
+  </div>
 
   <div class="main" *ngIf="logado">
+    <ion-button class="Logoutbtn" (click)="logout()"
+      >Sair
+      <ion-icon class="logoutIcon" name="log-out"></ion-icon>
+    </ion-button>
     <ion-grid>
       <ion-row>
         <ion-col>
-          <img class="ProfilePic" src="../../assets/user.png" alt="" />
+          <img
+            *ngIf="user.foto"
+            class="ProfilePic"
+            src="{{user.foto}}"
+            alt=""
+          />
+          <img
+            *ngIf="!user.foto"
+            class="ProfilePic"
+            src="../../assets/user.png"
+            alt=""
+          />
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <h3>Gabriel Bezerra de Freitas</h3>
+          <h3>{{user.nome}}</h3>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <h4>gabrielbezerra&#64;hotmail.com</h4>
+          <h4>{{user.email}}</h4>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -54,7 +164,9 @@
               <p class="titleHist">{{h.titulo}}</p>
               <p class="precoHist">R${{h.preco}}</p>
             </div>
-            <ion-button (click)="addToCart()"><i class="fa-solid fa-cart-plus"></i></ion-button>
+            <ion-button class="histBtn" (click)="addToCart()"
+              ><i class="fa-solid fa-cart-plus"></i
+            ></ion-button>
           </ion-item>
         </ion-list>
       </ion-card-content>
